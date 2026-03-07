@@ -98,6 +98,8 @@ public class GetCourseRunner {
         //I want sum of the WebAUtomation course Prices
         for (int i=0;i<coursePrice;i++){
             System.out.println("Hyderabad");
+            System.out.println("Hyderabad");
+
 
 
         }
