@@ -1,0 +1,66 @@
+{
+    "instructor": "RahulShetty",
+    "url": "rahulshettycademy.com",
+    "services": "projectSupport",
+    "expertise": "Automation",
+    "courses": {
+        "webAutomation": [
+            {
+                "courseTitle": "Selenium Webdriver Java",
+                "price": "50"
+            },
+            {
+                "courseTitle": "Cypress",
+                "price": "40"
+            },
+            {
+                "courseTitle": "Protractor",
+                "price": "40"
+            }
+        ],
+        "api": [
+            {
+                "courseTitle": "Rest Assured Automation using Java",
+                "price": "50"
+            },
+            {
+                "courseTitle": "SoapUI Webservices testing",
+                "price": "40"
+            }
+        ],
+        "mobile": [
+            {
+                "courseTitle": "Appium-Mobile Automation using Java",
+                "price": "50"
+            }
+        ]
+    },
+    "linkedIn": "https://www.linkedin.com/in/rahul-shetty-trainer/"
+}
+
+
+-------------------------------------------------------------------------------------------------------
+{
+  "companyName": "TechCorp",
+  "companyHOCity": "Bengaluru",
+  "supportedSalaryBanks": ["HDFC", "ICICI", "AXIS"],
+  "employees": [
+    {
+      "firstName": "Amod",
+      "lastName": "Mahajan",
+      "age": 28,
+      "married": false
+    },
+    {
+      "firstName": "Animesh",
+      "lastName": "Prashant",
+      "age": 30,
+      "married": false
+    }
+  ],
+  "companyPFDetails": {
+    "pfName": "XYZ",
+    "pfCity": "Bengaluru",
+    "pfYear": 2012
+  }
+}

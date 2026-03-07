@@ -1,0 +1,33 @@
+{
+  "orderId": 1001,
+  "orderDate": "2026-02-27",
+  "customer": {
+    "customerId": 501,
+    "name": "Mani",
+    "email": "mani@gmail.com",
+    "address": {
+      "street": "Madhapur",
+      "city": "Hyderabad",
+      "pincode": 500081
+    }
+  },
+  "items": [
+    {
+      "productId": 2001,
+      "productName": "Laptop",
+      "quantity": 1,
+      "price": 75000
+    },
+    {
+      "productId": 2002,
+      "productName": "Mouse",
+      "quantity": 2,
+      "price": 500
+    }
+  ],
+  "payment": {
+    "paymentId": "PAY123",
+    "method": "UPI",
+    "status": "Success"
+  }
+}
