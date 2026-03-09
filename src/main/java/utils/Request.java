@@ -1,26 +1,35 @@
 package utils;
 
-public class request {
-    public static String payload(){
-        return "{\n" +
-                "  \"location\": {\n" +
-                "    \"lat\": -38.383494,\n" +
-                "    \"lng\": 33.427362\n" +
-                "  },\n" +
-                "  \"accuracy\": 50,\n" +
-                "  \"name\": \"Frontline house\",\n" +
-                "  \"phone_number\": \"(+91) 983 893 3937\",\n" +
-                "  \"address\": \"29, side layout, cohen 09\",\n" +
-                "  \"types\": [\n" +
-                "    \"shoe park\",\n" +
-                "    \"shop\"\n" +
-                "  ],\n" +
-                "  \"website\": \"http://google.com\",\n" +
-                "  \"language\": \"French-IN\"\n" +
-                "}\n" +
-                " \n";
+import pojoclasses.addplace.AddPlace;
+import pojoclasses.addplace.Location;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Request {
+    public static  AddPlace payload() {
+        AddPlace addPlace = new AddPlace();
+
+        addPlace.setAccuracy(50);
+        addPlace.setName("Frontline house");
+        addPlace.setPhone_number("(+91) 983 893 3937");
+        addPlace.setAddress("29, side layout, cohen 09");
+        addPlace.setWebsite("http://google.com");
+        addPlace.setLanguage("French-IN");
+        Location l = new Location();
+        l.setLat(-38.383494);
+        l.setLng(33.427362);
+        addPlace.setLocation(l);
+        List<String> types = new ArrayList<>();
+        types.add("shoe park");
+        types.add("shop");
+        addPlace.setTypes(types);
+        return addPlace;
+
+
     }
-    public static String complexjson(){
+
+    public static String complexjson() {
         return "{\n" +
                 "\n" +
                 "\"dashboard\": {\n" +
@@ -67,12 +76,13 @@ public class request {
                 "\n" +
                 "}";
     }
-    public static String addBook(String isbn, String aisle){
-        String addbookPayload ="{\n" +
+
+    public static String addBook(String isbn, String aisle) {
+        String addbookPayload = "{\n" +
                 "\n" +
                 "\"name\":\"Learn Appium Automation with Java\",\n" +
-                "\"isbn\":\""+isbn+"\",\n" +
-                "\"aisle\":\""+aisle+"\",\n" +
+                "\"isbn\":\"" + isbn + "\",\n" +
+                "\"aisle\":\"" + aisle + "\",\n" +
                 "\"author\":\"John foe\"\n" +
                 "}\n";
         return addbookPayload;

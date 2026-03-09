@@ -2,14 +2,16 @@ package Books;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
-import utils.request;
+import utils.Request;
 
 import static io.restassured.RestAssured.given;
 
 public class AddPlace {
     public static void addPlace() {
         RestAssured.baseURI = "https://rahulshettyacademy.com";
-        String response = given().log().all().queryParams("key", "qaclick123").headers("Content-type", "application/json").body(request.payload()).
+
+
+        String response = given().log().all().queryParams("key", "qaclick123").headers("Content-type", "application/json").body(Request.payload()).
 
                 when().post("/maps/api/place/add/json").then().log().all().assertThat().statusCode(200).extract().response().asString();
 
@@ -17,10 +19,11 @@ public class AddPlace {
         String place_id = js1.getString("place_id");
         js1.getString("scope");
         js1.getString("id");
+    }
 
         //Update Place in ID
 
-        String updatedresponse = given().log().all().queryParam("key", "qaclick123").headers("Content-Type", "application/json").body("{\n" +
+       /* String updatedresponse = given().log().all().queryParam("key", "qaclick123").headers("Content-Type", "application/json").body("{\n" +
                 "\"place_id\":\"" + place_id + "\",\n" +
                 "\"address\":\"70 winter walk, USA\",\n" +
                 "\"key\":\"qaclick123\"\n" +
@@ -32,12 +35,13 @@ public class AddPlace {
         //js3.getString("place_id");
         System.out.println(js3.getString("address"));
 
+    }*/
+
+        public static void main (String args[]){
+            addPlace();
+
+        }
+
     }
 
-    public static void main(String args[]) {
-        AddPlace.addPlace();
-
-    }
-
-}
 

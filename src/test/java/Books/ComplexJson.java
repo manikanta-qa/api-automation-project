@@ -1,11 +1,11 @@
 package Books;
 
 import io.restassured.path.json.JsonPath;
-import utils.request;
+import utils.Request;
 
 public class ComplexJson {
     public static void complexJson() {
-        JsonPath js3 = new JsonPath(request.complexjson());
+        JsonPath js3 = new JsonPath(Request.complexjson());
 
         //1. Print No of courses returned by API
 
