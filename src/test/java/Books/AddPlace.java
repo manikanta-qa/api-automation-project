@@ -2,23 +2,30 @@ package Books;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 import utils.Request;
+import utils.RequestSpecificationUtils;
+import utils.RsponseSpecBuilderUtils;
+
 
 import static io.restassured.RestAssured.given;
 
 public class AddPlace {
     public static void addPlace() {
-        RestAssured.baseURI = "https://rahulshettyacademy.com";
 
 
-        String response = given().log().all().queryParams("key", "qaclick123").headers("Content-type", "application/json").body(Request.payload()).
+        AddPlace response = given().
+                log().all().
+                spec(RequestSpecificationUtils.requestSpecifications())
+                .body(Request.payload())
 
-                when().post("/maps/api/place/add/json").then().log().all().assertThat().statusCode(200).extract().response().asString();
+                .when()
+                .post("/maps/api/place/add/json")
+        .then()
+                .log().all()
+        .spec(RsponseSpecBuilderUtils.responseSpecBuilder()).extract().response().as(AddPlace.class);
 
-        JsonPath js1 = new JsonPath(response);
-        String place_id = js1.getString("place_id");
-        js1.getString("scope");
-        js1.getString("id");
+
     }
 
         //Update Place in ID
