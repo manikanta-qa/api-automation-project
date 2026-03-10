@@ -79,28 +79,7 @@ public class GetCourseRunner {
         System.out.println(response.getServices());
         System.out.println(response.getExpertise());
 
-        String response1 = given().log().all().queryParam("access_token", OauthToken.getToken()).
-                when().get("/oauthapi/getCourseDetails").
-                then().extract().asString();
-        JsonPath js = new JsonPath(response1);
-        int count = js.getInt(courses.webAutomation.size());
-
-        //Print course titles in WebAutomation
-
-        for (int i = 0; i < count; i++) {
-           String courseTitles= courses.webAutomation["+i+"].courseTitle);
-            String coursePrice=courses.webAutomation["+i+"].price);
-
-            System.out.println(courseTitles);
-            System.out.println(coursePrice);
         }
-        String coursePrices=coursePrice;
-        //I want sum of the WebAUtomation course Prices
-        for (int i=0;i<coursePrice;i++){
-            System.out.println("Hyderabad");
-            System.out.println("Hyderabad");
-
-
 
         }
 
@@ -112,8 +91,8 @@ public class GetCourseRunner {
 
 
 
-    }
 
 
-}
+
+
 
